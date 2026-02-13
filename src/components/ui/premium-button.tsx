@@ -18,7 +18,7 @@ export function PremiumButton({
     className,
     ...props
 }: PremiumButtonProps) {
-    const baseStyles = "inline-flex items-center justify-center font-bold tracking-wide transition-all duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none transform active:scale-95 text-center leading-none";
+    const baseStyles = "inline-flex items-center justify-center font-bold tracking-wide transition-all duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none transform active:scale-95 text-center leading-[0.85]";
 
     const variants = {
         primary: "bg-secondary text-white hover:bg-secondary/90 shadow-lg hover:shadow-xl hover:-translate-y-0.5", // Orange

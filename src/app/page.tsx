@@ -77,7 +77,7 @@ export default function Home() {
       {/* 
         ABOUT SECTION 
       */}
-      <section id="about" className="py-12 md:py-24 bg-white overflow-hidden">
+      <section id="about" className="py-6 md:py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
             {/* Text Content */}
