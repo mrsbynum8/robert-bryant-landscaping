@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { PremiumButton } from '@/components/ui/premium-button';
 import { cn } from '@/lib/utils';
-import { locations } from '@/lib/location-data';
+import { locationData } from '@/lib/location-data';
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -110,7 +110,7 @@ export function Navbar() {
                                         isLocationsOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                                     )}>
                                         <div className="overflow-hidden flex flex-col gap-2 items-center">
-                                            {Object.entries(locations).map(([key, location]) => (
+                                            {Object.entries(locationData).map(([key, location]) => (
                                                 <Link
                                                     key={key}
                                                     href={`/locations/${key}`}
