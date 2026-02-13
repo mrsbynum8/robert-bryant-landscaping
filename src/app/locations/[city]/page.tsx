@@ -106,12 +106,7 @@ export default async function LocationPage({ params }: PageProps) {
                                 </ul>
                             </div>
 
-                            <div className="rounded-xl bg-muted p-8 text-center">
-                                <h3 className="text-2xl font-black uppercase tracking-tight mb-4">Ready to love your yard again?</h3>
-                                <PremiumButton href="#contact">
-                                    Get Your Free {location.name} Quote
-                                </PremiumButton>
-                            </div>
+
                         </div>
 
                         {/* Right Column: CTA Form */}

@@ -41,7 +41,7 @@ export function Navbar() {
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-2 z-50">
                             <span className={cn(
-                                "font-heading font-black text-2xl tracking-tighter uppercase transition-colors duration-300",
+                                "font-heading font-black text-lg xs:text-xl md:text-2xl tracking-tighter uppercase transition-colors duration-300 whitespace-nowrap",
                                 isScrolled ? "text-primary" : "text-white"
                             )}>
                                 Robert Bryant <span className={cn(isScrolled ? "text-secondary" : "text-secondary")}>Landscaping</span>

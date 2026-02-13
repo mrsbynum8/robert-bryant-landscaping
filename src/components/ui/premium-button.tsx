@@ -18,7 +18,7 @@ export function PremiumButton({
     className,
     ...props
 }: PremiumButtonProps) {
-    const baseStyles = "inline-flex items-center justify-center font-bold tracking-wide transition-all duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none transform active:scale-95";
+    const baseStyles = "inline-flex items-center justify-center font-bold tracking-wide transition-all duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none transform active:scale-95 text-center leading-tight";
 
     const variants = {
         primary: "bg-secondary text-white hover:bg-secondary/90 shadow-lg hover:shadow-xl hover:-translate-y-0.5", // Orange
@@ -28,9 +28,9 @@ export function PremiumButton({
     };
 
     const sizes = {
-        sm: "h-9 px-4 text-sm",
-        md: "h-12 px-6 text-base",
-        lg: "h-14 px-8 text-lg",
+        sm: "min-h-[2.25rem] h-auto py-2 px-4 text-sm",
+        md: "min-h-[3rem] h-auto py-3 px-6 text-base",
+        lg: "min-h-[3.5rem] h-auto py-4 px-8 text-lg",
     };
 
     const combinedClassName = cn(
