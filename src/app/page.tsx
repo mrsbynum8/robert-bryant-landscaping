@@ -77,7 +77,7 @@ export default function Home() {
       {/* 
         ABOUT SECTION 
       */}
-      <section id="about" className="py-6 md:py-24 bg-white overflow-hidden">
+      <section id="about" className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
             {/* Text Content */}
@@ -119,7 +119,7 @@ export default function Home() {
       {/* 
         SERVICES SECTION
       */}
-      <section id="services" className="relative bg-muted py-24 overflow-hidden">
+      <section id="services" className="relative bg-muted pt-6 pb-24 md:py-24 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 z-0 opacity-[0.03]"
           style={{ backgroundImage: 'radial-gradient(#1b4d2e 1px, transparent 1px)', backgroundSize: '32px 32px' }}

@@ -1,13 +1,15 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { PremiumButton } from '@/components/ui/premium-button';
 import { cn } from '@/lib/utils';
+import { locations } from '@/lib/location-data';
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isLocationsOpen, setIsLocationsOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -90,17 +92,47 @@ export function Navbar() {
 
             {/* Mobile Menu Overlay */}
             {isMobileMenuOpen && (
-                <div className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col justify-center items-center gap-8 md:hidden animation-fade-in">
-                    <nav className="flex flex-col items-center gap-6">
+                <div className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col justify-center items-center gap-8 md:hidden animation-fade-in overflow-y-auto py-12">
+                    <nav className="flex flex-col items-center gap-6 w-full px-6">
                         {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="font-heading text-3xl font-black uppercase tracking-tight text-stone-800 hover:text-primary transition-colors"
-                            >
-                                {link.name}
-                            </Link>
+                            link.name === 'Locations' ? (
+                                <div key={link.name} className="flex flex-col items-center w-full">
+                                    <button
+                                        onClick={() => setIsLocationsOpen(!isLocationsOpen)}
+                                        className="flex items-center gap-2 font-heading text-3xl font-black uppercase tracking-tight text-stone-800 hover:text-primary transition-colors"
+                                    >
+                                        {link.name}
+                                        <ChevronDown className={cn("h-6 w-6 transition-transform", isLocationsOpen && "rotate-180")} />
+                                    </button>
+
+                                    <div className={cn(
+                                        "grid transition-all duration-300 ease-in-out w-full max-w-sm gap-2 mt-2",
+                                        isLocationsOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                                    )}>
+                                        <div className="overflow-hidden flex flex-col gap-2 items-center">
+                                            {Object.entries(locations).map(([key, location]) => (
+                                                <Link
+                                                    key={key}
+                                                    href={`/locations/${key}`}
+                                                    onClick={() => setIsMobileMenuOpen(false)}
+                                                    className="w-full text-center py-2 text-lg font-medium text-stone-600 hover:text-secondary rounded-lg hover:bg-stone-50 transition-colors"
+                                                >
+                                                    {location.name}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            ) : (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="font-heading text-3xl font-black uppercase tracking-tight text-stone-800 hover:text-primary transition-colors"
+                                >
+                                    {link.name}
+                                </Link>
+                            )
                         ))}
                         <Link
                             href="tel:7067104494"
