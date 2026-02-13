@@ -65,7 +65,7 @@ export default async function LocationPage({ params }: PageProps) {
             </section>
 
             {/* Content Section */}
-            <section className="py-32">
+            <section className="py-12 md:py-32">
                 <div className="container mx-auto px-6">
                     <div className="grid gap-16 lg:grid-cols-2">
 

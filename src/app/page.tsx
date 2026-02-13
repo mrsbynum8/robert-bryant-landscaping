@@ -18,7 +18,7 @@ export default function Home() {
       {/* 
         HERO SECTION 
       */}
-      <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden pt-20">
+      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden pt-24 pb-12">
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -34,7 +34,7 @@ export default function Home() {
         {/* Content */}
         <div className="container relative z-10 mx-auto px-6 text-center text-white">
           <ScrollAnimation>
-            <h1 className="mb-6 font-heading text-4xl font-black uppercase leading-tight tracking-tight sm:text-6xl md:text-7xl drop-shadow-2xl">
+            <h1 className="mb-6 font-heading text-4xl font-black uppercase leading-none tracking-tight sm:text-6xl md:text-7xl drop-shadow-2xl">
               Your Yard Deserves<br />
               <span className="text-primary">The Best in Atlanta</span>
             </h1>
@@ -77,7 +77,7 @@ export default function Home() {
       {/* 
         ABOUT SECTION 
       */}
-      <section id="about" className="py-24 bg-white overflow-hidden">
+      <section id="about" className="py-12 md:py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
             {/* Text Content */}
