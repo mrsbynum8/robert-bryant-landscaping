@@ -20,7 +20,7 @@ export function ServiceAreas() {
                         <Link
                             key={location.name}
                             href={location.href}
-                            className="rounded-xl bg-white px-8 py-4 text-lg font-bold text-foreground shadow-sm ring-1 ring-inset ring-gray-200 transition-all hover:scale-105 hover:bg-gray-50 hover:shadow-md"
+                            className="rounded-xl bg-[#FDF8F3] px-8 py-4 text-lg font-bold text-[#594a3c] shadow-sm ring-1 ring-inset ring-[#E6D5C3] transition-all hover:scale-105 hover:bg-[#F5EBE0] hover:shadow-md"
                         >
                             {location.name}
                         </Link>
